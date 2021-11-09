@@ -8,7 +8,7 @@ def newton2(f, g, fprime, eps, guess=1, occur=0):
         return guess
 
 
-def intersect(f, g, a, b, eps):
+def intersect(f, g, a, b, eps = 0.0001):
     newFuncDer = lambda x: ((f(x + 0.0001) - f(x)) / 0.0001) - ((g(x + 0.0001) - g(x)) / 0.0001)
     return newton2(f, g, newFuncDer,eps,b)
 
